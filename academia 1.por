@@ -117,6 +117,39 @@ programa
 
                 caso contrario:
                     escreva("\nOpção inválida!\n")
+                    caso 4:
+    se (quantidade == 0)
+    {
+        escreva("\nNenhum aluno cadastrado.\n")
+    }
+    senao
+    {
+        inteiro numero
+
+        escreva("\n===== CONSULTA DE MENSALIDADE =====\n")
+        escreva("Digite o número do aluno: ")
+        leia(numero)
+
+        se (numero >= 1 e numero <= quantidade)
+        {
+            escreva("\nAluno: ", nome[numero - 1], "\n")
+
+            se (mensalidade[numero - 1] == "sim")
+            {
+                escreva("Status: MENSALIDADE PAGA\n")
+            }
+            senao
+            {
+                escreva("Status: MENSALIDADE PENDENTE\n")
+            }
+        }
+        senao
+        {
+            escreva("\nNúmero de aluno inválido!\n")
+        }
+    }
+    pare
+
             }
 
         } enquanto (opcao != 4)
